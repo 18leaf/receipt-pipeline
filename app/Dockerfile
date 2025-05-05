@@ -5,12 +5,15 @@ FROM python:3.12-slim
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     tesseract-ocr libtesseract-dev libleptonica-dev \
+    libgl1            \ 
+    libglib2.0-0      \  
     build-essential poppler-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # 1. Prevent pip cache bloat, install deps early
 WORKDIR /app
 COPY requirements.txt .
+COPY lexicon.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 2. Copy source last (layer cache)

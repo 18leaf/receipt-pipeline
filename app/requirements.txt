@@ -11,6 +11,8 @@ rapidfuzz           # fuzzy‑match
 sqlalchemy
 pymysql             # MySQL driver
 paddleocr           # optional high‑accuracy OCR :contentReference[oaicite:2]{index=2}
+cryptography
+pymysql
 # --- optional heavy components ---
 transformers      # local‑LLM fallback
 sentencepiece
