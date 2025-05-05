@@ -1,0 +1,18 @@
+fastapi          # API framework :contentReference[oaicite:0]{index=0}
+uvicorn[standard]   # ASGI server + hot‑reload
+python-multipart    # form‑data parsing
+aiofiles            # async file IO
+pydantic            # data validation layer
+pillow             # image I/O
+opencv-python-headless
+numpy
+pytesseract       # OCR wrapper :contentReference[oaicite:1]{index=1}
+rapidfuzz           # fuzzy‑match
+sqlalchemy
+pymysql             # MySQL driver
+paddleocr           # optional high‑accuracy OCR :contentReference[oaicite:2]{index=2}
+# --- optional heavy components ---
+transformers      # local‑LLM fallback
+sentencepiece
+# For GPU acceleration replace CPU Paddle:
+# paddlepaddle-gpu==2.6.0.post118  (CUDA 11.8, GTX 1070 compatible)
